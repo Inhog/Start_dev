@@ -1,6 +1,6 @@
-package day09;
+package day10;
 
-public class Animal {
+public abstract class Animal {
 	String kind ="Animal_kind";
 	
 	protected Animal(){
@@ -12,7 +12,5 @@ public class Animal {
 		this.kind = kind;
 	}
 	
-	public void breath(){
-		System.out.println("폐~~~~~~~~~");
-	}
+	public abstract void breath();
 }
