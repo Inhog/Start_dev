@@ -1,6 +1,6 @@
 package day11;
 
-public class Employee {
+public class Employee implements Comparable<Employee>{
 	private String name;
 	private String dept;		//외부에서 직접 읽지는 못함
 	
@@ -53,6 +53,10 @@ public class Employee {
 	}
 	public void close(){
 		System.out.println("자원반납........");
+	}
+	@Override
+	public int compareTo(Employee o) {
+		return name.compareTo(o.name);		// 클래스의 name을 비교하겠다.
 	}
 	
 }
